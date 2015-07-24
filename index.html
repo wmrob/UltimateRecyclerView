@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ultimaterecyclerview by cymcsg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Ultimaterecyclerview</h1>
+      <h2 class="project-tagline">A RecyclerView(advanced and flexible version of ListView in Android) with refreshing,loading more,animation and many other features.</h2>
+      <a href="https://github.com/cymcsg/UltimateRecyclerView" class="btn">View on GitHub</a>
+      <a href="https://github.com/cymcsg/UltimateRecyclerView/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/cymcsg/UltimateRecyclerView/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="ultimaterecyclerview" class="anchor" href="#ultimaterecyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>UltimateRecyclerView</h1>
+
+<h3>
+<a id="version0311" class="anchor" href="#version0311" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version:0.3.11</h3>
+
+<h4>
+<a id="master-branch" class="anchor" href="#master-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Master branch:<a href="https://travis-ci.org/cymcsg/UltimateRecyclerView"><img src="https://travis-ci.org/cymcsg/UltimateRecyclerView.svg?branch=master" alt="Build Status"></a>
+</h4>
+
+<h4>
+<a id="dev-branch" class="anchor" href="#dev-branch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dev branch:<a href="https://travis-ci.org/cymcsg/UltimateRecyclerView"><img src="https://travis-ci.org/cymcsg/UltimateRecyclerView.svg?branch=dev" alt="Build Status"></a>
+</h4>
+
+<p><a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/license-Apache%202-blue.svg" alt="License"></a></p>
+
+<h5>
+<a id="project-websitehttpsgithubcomcymcsgultimaterecyclerview" class="anchor" href="#project-websitehttpsgithubcomcymcsgultimaterecyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project website:<a href="https://github.com/cymcsg/UltimateRecyclerView">https://github.com/cymcsg/UltimateRecyclerView</a>
+</h5>
+
+<h3>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
+
+<p>UltimateRecyclerView is a RecyclerView(advanced and flexible version of ListView) with pulling to refresh, loading more, swiping to dismiss, draging and drop, animations ,sticky header,show or hide toolbar and FAB when scrolling and many other features.You can use it <code>just like RecyclerView</code>.</p>
+
+<p>Notice that UltimateRecyclerView is a project under development.</p>
+
+<p><a href="#donations">Your donations is highly appreciated. Thank you!</a></p>
+
+<h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features:</h3>
+
+<ul>
+<li>Swipe to refresh(using android.support.v4.widget.SwipeRefreshLayout)</li>
+<li>Many kinds of animations</li>
+<li>Swipe to dismiss</li>
+<li>Parallax or normal head view</li>
+<li>Drag and drop items</li>
+<li>Loading more when reach the last item(infinite scrolling)</li>
+<li>Custom views in loading more</li>
+<li>Showing or hiding toolbar and floating button when scrolling</li>
+<li>Scrollbars</li>
+<li>Colorful styles of <code>swipe to refresh</code>
+</li>
+<li>Sticky header like instagram</li>
+<li>Support different layout in adapter</li>
+<li>Loading adapter with animation</li>
+</ul>
+
+<h3>
+<a id="changes-in-0311" class="anchor" href="#changes-in-0311" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changes in 0.3.11:</h3>
+
+<ul>
+<li>[x] new style of drag and swipe</li>
+<li>[x] normal head view</li>
+<li>[x] add Generics in the UltimateViewAdapter</li>
+<li>[x] expandable item of recyclerview</li>
+</ul>
+
+<h3>
+<a id="changes-in-038" class="anchor" href="#changes-in-038" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changes in 0.3.8:</h3>
+
+<ul>
+<li>[x] support different layout in adapter</li>
+<li>[x] loading adapter with animations</li>
+<li>[x] support minSdk to 8</li>
+<li>[x] Upgrade recyclerview to 22.2.0</li>
+</ul>
+
+<h3>
+<a id="changes-in-032" class="anchor" href="#changes-in-032" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changes in 0.3.2:</h3>
+
+<ul>
+<li>[x] add a empty view when the adapter do not have data</li>
+<li>[x] add some colorful styles of  <code>swipe to refresh</code>
+</li>
+<li>[x] add swapAdapter() ,getAdapter() etc.</li>
+<li>[x] Custom FAB style</li>
+<li>[x] add support for scrollbars of RecyclerView</li>
+<li>[x] add method set background color of recyclerview</li>
+<li>[x] add method to set default swipe to dismiss color</li>
+<li>[x] support easy way to use admob</li>
+</ul>
+
+<h3>
+<a id="upcoming-features" class="anchor" href="#upcoming-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upcoming features:</h3>
+
+<ul>
+<li>More animations</li>
+<li>Optimise UltimateViewAdapter</li>
+<li>...</li>
+</ul>
+
+<p><a href="UpcomingChanges.md">Upcoming changes in UltiamteRecyclerview 0.4.0</a>:</p>
+
+<p>If you have some good ideas, please tell us. My email is cymcsg # gmail.com.And it is a good idea to put your idea on the issue.</p>
+
+<h4>
+<a id="welcome-to-fork-and-pull-request" class="anchor" href="#welcome-to-fork-and-pull-request" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to fork and pull request.</h4>
+
+<h3>
+<a id="if-you-want-to-use-a-rapid-development-framework-for-developing-appsyou-can-try-ultimateandroid-framework" class="anchor" href="#if-you-want-to-use-a-rapid-development-framework-for-developing-appsyou-can-try-ultimateandroid-framework" aria-hidden="true"><span class="octicon octicon-link"></span></a>If you want to use a rapid development framework for developing apps,you can try <a href="https://github.com/cymcsg/UltimateAndroid">UltimateAndroid Framework</a>.</h3>
+
+<h3>
+<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshot</h3>
+
+<p><img src="https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview11.gif" alt="ultimate_recyclerview">
+<img src="https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview12.gif" alt="ultimate_recyclerview">
+<img src="https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview7.gif" alt="ultimate_recyclerview">
+<img src="https://bytebucket.org/marshalchen/images/raw/f4794974d8de71ab1d0f0efddda556df7e792df2/ultimaterecyclerview/ultimate_recyclerview3.gif" alt="ultimate_recyclerview">
+<img src="https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview8.gif" alt="ultimate_recyclerview">
+<img src="https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview9.gif" alt="ultimate_recyclerview"></p>
+
+<h3>
+<a id="sample" class="anchor" href="#sample" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample</h3>
+
+<p>You can clone the project and compile it yourself (it includes a sample), or you can check it out already compiled at Google Play</p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.marshalchen.ultimaterecyclerview.demo"><img src="http://developer.android.com/images/brand/en_generic_rgb_wo_45.png" alt="Google Play"></a></p>
+
+<blockquote>
+<p>Notice that it might not be the latest version</p>
+</blockquote>
+
+<h3>
+<a id="quick-setupbasic-usage" class="anchor" href="#quick-setupbasic-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Setup（Basic Usage）</h3>
+
+<h6>
+<a id="1integration" class="anchor" href="#1integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.Integration</h6>
+
+<div class="highlight highlight-groovy"><pre>repositories {
+        jcenter()
+    }
+dependencies {
+    <span class="pl-k">..</span>.
+    compile <span class="pl-s"><span class="pl-pds">'</span>com.marshalchen.ultimaterecyclerview:library:0.3.11<span class="pl-pds">'</span></span>
+}</pre></div>
+
+<h5>
+<a id="2usage" class="anchor" href="#2usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.Usage:</h5>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>fill_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>fill_parent<span class="pl-pds">"</span></span>
+        <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/ultimate_recycler_view<span class="pl-pds">"</span></span>
+       &gt;
+        &lt;/<span class="pl-ent">com</span>.marshalchen.ultimaterecyclerview.UltimateRecyclerView&gt;</pre></div>
+
+<h5>
+<a id="3features" class="anchor" href="#3features" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.Features:</h5>
+
+<p>Loading more:</p>
+
+<div class="highlight highlight-java"><pre>  ultimateRecyclerView<span class="pl-k">.</span>enableLoadmore();</pre></div>
+
+<div class="highlight highlight-java"><pre> ultimateRecyclerView<span class="pl-k">.</span>setOnLoadMoreListener(<span class="pl-k">new</span> <span class="pl-smi">UltimateRecyclerView</span>.<span class="pl-smi">OnLoadMoreListener</span>() {
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">loadMore</span>(<span class="pl-k">int</span> <span class="pl-v">itemsCount</span>, <span class="pl-k">final</span> <span class="pl-k">int</span> <span class="pl-v">maxLastVisiblePosition</span>) {
+                <span class="pl-smi">Handler</span> handler <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Handler</span>();
+                handler<span class="pl-k">.</span>postDelayed(<span class="pl-k">new</span> <span class="pl-smi">Runnable</span>() {
+                    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">run</span>() {
+                        simpleRecyclerViewAdapter<span class="pl-k">.</span>insert(<span class="pl-s"><span class="pl-pds">"</span>More <span class="pl-pds">"</span></span> <span class="pl-k">+</span> moreNum<span class="pl-k">++</span>, simpleRecyclerViewAdapter<span class="pl-k">.</span>getAdapterItemCount());
+                    }
+                }, <span class="pl-c1">1000</span>);
+            }
+        });
+</pre></div>
+
+<h6>
+<a id="set-parallaxheader" class="anchor" href="#set-parallaxheader" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set ParallaxHeader:</h6>
+
+<div class="highlight highlight-java"><pre> ultimateRecyclerView<span class="pl-k">.</span>setParallaxHeader(getLayoutInflater()<span class="pl-k">.</span>inflate(<span class="pl-smi">R</span><span class="pl-k">.</span>layout<span class="pl-k">.</span>parallax_recyclerview_header, ultimateRecyclerView<span class="pl-k">.</span>mRecyclerView, <span class="pl-c1">false</span>));
+
+ultimateRecyclerView<span class="pl-k">.</span>setOnParallaxScroll(<span class="pl-k">new</span> <span class="pl-smi">UltimateRecyclerView</span>.<span class="pl-smi">OnParallaxScroll</span>() {
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onParallaxScroll</span>(<span class="pl-k">float</span> <span class="pl-v">percentage</span>, <span class="pl-k">float</span> <span class="pl-v">offset</span>, <span class="pl-smi">View</span> <span class="pl-v">parallax</span>) {
+                <span class="pl-smi">Drawable</span> c <span class="pl-k">=</span> toolbar<span class="pl-k">.</span>getBackground();
+                c<span class="pl-k">.</span>setAlpha(<span class="pl-smi">Math</span><span class="pl-k">.</span>round(<span class="pl-c1">127</span> <span class="pl-k">+</span> percentage <span class="pl-k">*</span> <span class="pl-c1">128</span>));
+                toolbar<span class="pl-k">.</span>setBackgroundDrawable(c);
+            }
+        });</pre></div>
+
+<h6>
+<a id="set-swipe-to-refresh" class="anchor" href="#set-swipe-to-refresh" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set swipe to refresh:</h6>
+
+<div class="highlight highlight-java"><pre>ultimateRecyclerView<span class="pl-k">.</span>setDefaultOnRefreshListener(<span class="pl-k">new</span> <span class="pl-smi">SwipeRefreshLayout</span>.<span class="pl-smi">OnRefreshListener</span>() {
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onRefresh</span>() {
+                <span class="pl-k">new</span> <span class="pl-smi">Handler</span>()<span class="pl-k">.</span>postDelayed(<span class="pl-k">new</span> <span class="pl-smi">Runnable</span>() {
+                    <span class="pl-k">@Override</span>
+                    <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">run</span>() {
+                        simpleRecyclerViewAdapter<span class="pl-k">.</span>insert(moreNum<span class="pl-k">++</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span>  Refresh things<span class="pl-pds">"</span></span>, <span class="pl-c1">0</span>);
+                        ultimateRecyclerView<span class="pl-k">.</span>setRefreshing(<span class="pl-c1">false</span>);
+                    }
+                }, <span class="pl-c1">1000</span>);
+            }
+        });</pre></div>
+
+<h6>
+<a id="set-swipe-to-dismiss" class="anchor" href="#set-swipe-to-dismiss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set swipe to dismiss:</h6>
+
+<div class="highlight highlight-java"><pre>  <span class="pl-smi">ItemTouchHelper</span><span class="pl-k">.</span><span class="pl-smi">Callback</span> callback <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">SimpleItemTouchHelperCallback</span>(simpleRecyclerViewAdapter);
+        mItemTouchHelper <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">ItemTouchHelper</span>(callback);
+        mItemTouchHelper<span class="pl-k">.</span>attachToRecyclerView(ultimateRecyclerView<span class="pl-k">.</span>mRecyclerView);</pre></div>
+
+<h6>
+<a id="drag-and-drop" class="anchor" href="#drag-and-drop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drag and drop:</h6>
+
+<div class="highlight highlight-java"><pre>   simpleRecyclerViewAdapter<span class="pl-k">.</span>setOnDragStartListener(<span class="pl-k">new</span> <span class="pl-smi">SimpleAdapter</span>.<span class="pl-smi">OnStartDragListener</span>() {
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onStartDrag</span>(<span class="pl-smi">RecyclerView</span>.<span class="pl-smi">ViewHolder</span> <span class="pl-v">viewHolder</span>) {
+                mItemTouchHelper<span class="pl-k">.</span>startDrag(viewHolder);
+            }
+        });</pre></div>
+
+<p>Animations:</p>
+
+<div class="highlight highlight-java"><pre>  ultimateRecyclerView<span class="pl-k">.</span>setItemAnimator(<span class="pl-smi">Type</span><span class="pl-k">.</span>values()[position]<span class="pl-k">.</span>getAnimator());
+  ultimateRecyclerView<span class="pl-k">.</span>getItemAnimator()<span class="pl-k">.</span>setAddDuration(<span class="pl-c1">300</span>);
+  ultimateRecyclerView<span class="pl-k">.</span>getItemAnimator()<span class="pl-k">.</span>setRemoveDuration(<span class="pl-c1">300</span>);</pre></div>
+
+<h6>
+<a id="showing-and-hiding-toolbar-and-floating-button" class="anchor" href="#showing-and-hiding-toolbar-and-floating-button" aria-hidden="true"><span class="octicon octicon-link"></span></a>Showing and hiding toolbar and floating button:</h6>
+
+<div class="highlight highlight-java"><pre>  ultimateRecyclerView<span class="pl-k">.</span>setScrollViewCallbacks(<span class="pl-k">new</span> <span class="pl-smi">ObservableScrollViewCallbacks</span>() {
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onScrollChanged</span>(<span class="pl-k">int</span> <span class="pl-v">scrollY</span>, <span class="pl-k">boolean</span> <span class="pl-v">firstScroll</span>, <span class="pl-k">boolean</span> <span class="pl-v">dragging</span>) {           
+             }
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onDownMotionEvent</span>() {
+            }
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onUpOrCancelMotionEvent</span>(<span class="pl-smi">ObservableScrollState</span> <span class="pl-v">observableScrollState</span>) {
+                <span class="pl-k">if</span> (observableScrollState <span class="pl-k">==</span> <span class="pl-smi">ObservableScrollState</span><span class="pl-c1"><span class="pl-k">.</span>DOWN</span>) {
+                     ultimateRecyclerView<span class="pl-k">.</span>showToolbar(toolbar, ultimateRecyclerView,getScreenHeight());
+                } <span class="pl-k">else</span> <span class="pl-k">if</span> (observableScrollState <span class="pl-k">==</span> <span class="pl-smi">ObservableScrollState</span><span class="pl-c1"><span class="pl-k">.</span>UP</span>) {
+                      ultimateRecyclerView<span class="pl-k">.</span>hideToolbar(toolbar,ultimateRecyclerView,getScreenHeight());
+                } <span class="pl-k">else</span> <span class="pl-k">if</span> (observableScrollState <span class="pl-k">==</span> <span class="pl-smi">ObservableScrollState</span><span class="pl-c1"><span class="pl-k">.</span>STOP</span>) {
+                }
+            }
+        });        </pre></div>
+
+<h6>
+<a id="show-empty-view-when-the-adapter-is-null" class="anchor" href="#show-empty-view-when-the-adapter-is-null" aria-hidden="true"><span class="octicon octicon-link"></span></a>Show empty view when the adapter is null:</h6>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+...
+app:recyclerviewEmptyView=<span class="pl-s"><span class="pl-pds">"</span>@layout/empty_view<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<p>OR</p>
+
+<div class="highlight highlight-java"><pre>ultimateRecyclerView<span class="pl-k">.</span>setEmptyView(getResources()<span class="pl-k">.</span>getIdentifier(<span class="pl-s"><span class="pl-pds">"</span>empty_view<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>layout<span class="pl-pds">"</span></span>,getPackageName()));
+
+ultimateRecyclerView<span class="pl-k">.</span>showEmptyView();</pre></div>
+
+<h6>
+<a id="show-custom-floatingviewboth-menu-and-button-are-fine-it-is-easy-to-set-click-event-on-them-when-the-adapter-is-null" class="anchor" href="#show-custom-floatingviewboth-menu-and-button-are-fine-it-is-easy-to-set-click-event-on-them-when-the-adapter-is-null" aria-hidden="true"><span class="octicon octicon-link"></span></a>Show custom FloatingView(Both menu and button are fine. It is easy to set click event on them) when the adapter is null:</h6>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+...
+ <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">recyclerviewFloatingActionView</span>=<span class="pl-s"><span class="pl-pds">"</span>@layout/floating_view<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h6>
+<a id="set-custom-colorful-style-of-pull-to-refresh" class="anchor" href="#set-custom-colorful-style-of-pull-to-refresh" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set custom colorful style of pull to refresh:</h6>
+
+<div class="highlight highlight-xml"><pre> &lt;<span class="pl-ent">com</span>.marshalchen.ultimaterecyclerview.CustomUltimateRecyclerview
+ .../&gt;</pre></div>
+
+<h6>
+<a id="using-customultimaterecyclerview-instead-of-ultimaterecyclerview" class="anchor" href="#using-customultimaterecyclerview-instead-of-ultimaterecyclerview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using CustomUltimateRecyclerview instead of UltimateRecyclerView</h6>
+
+<p><code>ultimateRecyclerView.setCustomSwipeToRefresh();</code></p>
+
+<h6>
+<a id="set-scrollbars-of-recyclerview-by-set-attributes-of-ultimaterecyclerview-in-xml-layout" class="anchor" href="#set-scrollbars-of-recyclerview-by-set-attributes-of-ultimaterecyclerview-in-xml-layout" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set scrollbars of RecyclerView by set attributes of UltimateRecyclerView in xml layout:</h6>
+
+<div class="highlight highlight-xml"><pre>&lt;<span class="pl-ent">com</span>.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">recyclerviewScrollbars</span>=<span class="pl-s"><span class="pl-pds">"</span>vertical<span class="pl-pds">"</span></span> /&gt;                </pre></div>
+
+<p>Note that set scrollbars of RecyclerView dynamically by code is <strong>NOT SUPPORTED</strong> refer to <a href="http://stackoverflow.com/questions/27056379/is-there-any-way-to-enable-scrollbars-for-recyclerview-in-code">this</a></p>
+
+<h6>
+<a id="add-sticky-header" class="anchor" href="#add-sticky-header" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add sticky header:</h6>
+
+<p>In MainActivity:</p>
+
+<div class="highlight highlight-java"><pre>   <span class="pl-smi">StickyRecyclerHeadersDecoration</span> headersDecor <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">StickyRecyclerHeadersDecoration</span>(simpleRecyclerViewAdapter);
+  ultimateRecyclerView<span class="pl-k">.</span>addItemDecoration(headersDecor);</pre></div>
+
+<p>In the adapter:</p>
+
+<div class="highlight highlight-java"><pre> @<span class="pl-smi">Override</span>
+    <span class="pl-k">public</span> <span class="pl-k">long</span> generateHeaderId(<span class="pl-k">int</span> position) {
+        <span class="pl-k">if</span> (getItem(position)<span class="pl-k">.</span>length() <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>)
+            <span class="pl-k">return</span> getItem(position)<span class="pl-k">.</span>charAt(<span class="pl-c1">0</span>);
+        <span class="pl-k">else</span> <span class="pl-k">return</span> <span class="pl-k">-</span><span class="pl-c1">1</span>;
+    }
+    @<span class="pl-smi">Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">RecyclerView</span><span class="pl-k">.</span><span class="pl-smi">ViewHolder</span> onCreateHeaderViewHolder(<span class="pl-smi">ViewGroup</span> viewGroup) {
+        <span class="pl-smi">View</span> view <span class="pl-k">=</span> <span class="pl-smi">LayoutInflater</span><span class="pl-k">.</span>from(viewGroup<span class="pl-k">.</span>getContext())
+                .inflate(<span class="pl-smi">R</span><span class="pl-k">.</span>layout<span class="pl-k">.</span>stick_header_item, viewGroup, <span class="pl-c1">false</span>);
+        <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-smi">RecyclerView</span>.<span class="pl-smi">ViewHolder</span>(view) {
+        };
+    }</pre></div>
+
+<p>Refresh adapter:</p>
+
+<div class="highlight highlight-java"><pre>mAdapter<span class="pl-k">.</span>registerAdapterDataObserver(<span class="pl-k">new</span> <span class="pl-smi">RecyclerView</span>.<span class="pl-smi">AdapterDataObserver</span>() {
+      <span class="pl-k">@Override</span> <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onChanged</span>() {
+        headersDecor<span class="pl-k">.</span>invalidateHeaders();
+      }
+    });</pre></div>
+
+<h6>
+<a id="using-different-layout-in-an-adapter" class="anchor" href="#using-different-layout-in-an-adapter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using different layout in an adapter:</h6>
+
+<p>You should define a MultiViewAdapter which extends UltimateDiffernetViewTypeAdapter and then your custom differnt view adapters.</p>
+
+<div class="highlight highlight-java"><pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">MultiViewTypesRecyclerViewAdapter</span> <span class="pl-k">extends</span> <span class="pl-e">UltimateDifferentViewTypeAdapter</span>{
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">Enum</span> <span class="pl-en">getEnumFromPosition</span>(<span class="pl-k">int</span> <span class="pl-v">position</span>) {
+        <span class="pl-k">if</span> (position <span class="pl-k">%</span> <span class="pl-c1">2</span> <span class="pl-k">==</span> <span class="pl-c1">1</span>) {
+            <span class="pl-k">return</span> <span class="pl-smi">SampleViewType</span><span class="pl-c1"><span class="pl-k">.</span>SAMPLE1</span>;
+        } <span class="pl-k">else</span> {
+            <span class="pl-k">return</span> <span class="pl-smi">SampleViewType</span><span class="pl-c1"><span class="pl-k">.</span>SAMPLE2</span>;
+        }
+    }
+
+    <span class="pl-k">public</span> <span class="pl-en">MultiViewTypesRecyclerViewAdapter</span>(<span class="pl-k">List&lt;<span class="pl-smi">String</span>&gt;</span> <span class="pl-v">dataSet</span>) {
+      putBinder(<span class="pl-smi">SampleViewType</span><span class="pl-c1"><span class="pl-k">.</span>SAMPLE1</span>, <span class="pl-k">new</span> <span class="pl-smi">Sample1Binder</span>(<span class="pl-v">this</span>,dataSet));
+      putBinder(<span class="pl-smi">SampleViewType</span><span class="pl-c1"><span class="pl-k">.</span>SAMPLE2</span>, <span class="pl-k">new</span> <span class="pl-smi">Sample2Binder</span>(<span class="pl-v">this</span>,dataSet));
+      <span class="pl-c1">...</span>
+    }
+    <span class="pl-c1">...</span>
+}</pre></div>
+
+<div class="highlight highlight-java"><pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Sample1Binder</span> <span class="pl-k">extends</span> <span class="pl-e">DataBinder&lt;<span class="pl-smi">Sample1Binder</span>.ViewHolder</span>&gt; {
+
+    <span class="pl-k">@Override</span>
+    <span class="pl-k">public</span> <span class="pl-smi">ViewHolder</span> <span class="pl-en">newViewHolder</span>(<span class="pl-smi">ViewGroup</span> <span class="pl-v">parent</span>) {
+        <span class="pl-smi">View</span> view <span class="pl-k">=</span> <span class="pl-smi">LayoutInflater</span><span class="pl-k">.</span>from(parent<span class="pl-k">.</span>getContext())<span class="pl-k">.</span>inflate(
+                <span class="pl-smi">R</span><span class="pl-k">.</span>layout<span class="pl-k">.</span>simple_binder1, parent, <span class="pl-c1">false</span>);
+        <span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-smi">ViewHolder</span>(view);
+    }
+    <span class="pl-c1">...</span>
+}
+</pre></div>
+
+<h6>
+<a id="admob-implementation" class="anchor" href="#admob-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Admob implementation</h6>
+
+<div class="highlight highlight-java"><pre> <span class="pl-k">private</span> <span class="pl-smi">AdView</span> createadmob() {
+        <span class="pl-smi">AdView</span> mAdView <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">AdView</span>(<span class="pl-v">this</span>);
+        mAdView<span class="pl-k">.</span>setAdSize(<span class="pl-smi">AdSize</span><span class="pl-c1"><span class="pl-k">.</span>MEDIUM_RECTANGLE</span>);
+        mAdView<span class="pl-k">.</span>setAdUnitId(<span class="pl-s"><span class="pl-pds">"</span>__GOOGLE_AD_UNIT__ID__<span class="pl-pds">"</span></span>);
+        mAdView<span class="pl-k">.</span>setLayoutParams(<span class="pl-k">new</span> <span class="pl-smi">ViewGroup</span>.<span class="pl-smi">LayoutParams</span>(<span class="pl-smi">ViewGroup</span><span class="pl-k">.</span><span class="pl-smi">LayoutParams</span><span class="pl-c1"><span class="pl-k">.</span>MATCH_PARENT</span>, <span class="pl-smi">ViewGroup</span><span class="pl-k">.</span><span class="pl-smi">LayoutParams</span><span class="pl-c1"><span class="pl-k">.</span>MATCH_PARENT</span>));
+
+        <span class="pl-c">// Create an ad request.</span>
+        <span class="pl-smi">AdRequest</span><span class="pl-k">.</span><span class="pl-smi">Builder</span> adRequestBuilder <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">AdRequest</span>.<span class="pl-smi">Builder</span>();
+
+        <span class="pl-k">if</span> (admob_test_mode)
+            <span class="pl-c">// Optionally populate the ad request builder.</span>
+            adRequestBuilder<span class="pl-k">.</span>addTestDevice(<span class="pl-smi">AdRequest</span><span class="pl-c1"><span class="pl-k">.</span>DEVICE_ID_EMULATOR</span>);
+
+        <span class="pl-c">// Start loading the ad.</span>
+        mAdView<span class="pl-k">.</span>loadAd(adRequestBuilder<span class="pl-k">.</span>build());
+        <span class="pl-k">return</span> mAdView;
+    }</pre></div>
+
+<div class="highlight highlight-java"><pre>       simpleRecyclerViewAdapter <span class="pl-k">=</span> <span class="pl-k">new</span> admobdfpadapter(createadmob(), <span class="pl-c1">5</span>, stringList, <span class="pl-k">new</span> <span class="pl-smi">AdmobAdapter</span>.<span class="pl-smi">AdviewListener</span>() {
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-smi">AdView</span> <span class="pl-en">onGenerateAdview</span>() {
+                <span class="pl-k">return</span> createadmob();
+            }
+        });</pre></div>
+
+<h6>
+<a id="loading-adapter-with-animations-" class="anchor" href="#loading-adapter-with-animations-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading adapter with animations :</h6>
+
+<div class="highlight highlight-java"><pre>    @<span class="pl-smi">Override</span>
+    <span class="pl-k">public</span> <span class="pl-k">void</span> onBindViewHolder(<span class="pl-smi">RecyclerView</span><span class="pl-k">.</span><span class="pl-smi">ViewHolder</span> holder, <span class="pl-k">int</span> position) {
+       <span class="pl-c1">...</span>
+        <span class="pl-k">if</span> (<span class="pl-k">!</span>isFirstOnly <span class="pl-k">||</span> position <span class="pl-k">&gt;</span> mLastPosition) {
+            <span class="pl-k">for</span> (<span class="pl-smi">Animator</span> anim <span class="pl-k">:</span> getAdapterAnimations(holder<span class="pl-k">.</span>itemView, <span class="pl-smi">AdapterAnimationType</span><span class="pl-k">.</span><span class="pl-smi">ScaleIn</span>)) {
+                anim<span class="pl-k">.</span>setDuration(mDuration)<span class="pl-k">.</span>start();
+                anim<span class="pl-k">.</span>setInterpolator(mInterpolator);
+            }
+            mLastPosition <span class="pl-k">=</span> position;
+        } <span class="pl-k">else</span> {
+            <span class="pl-smi">ViewHelper</span><span class="pl-k">.</span>clear(holder<span class="pl-k">.</span>itemView);
+        }
+
+    }</pre></div>
+
+<h4>
+<a id="if-you-want-to-see-more-detailsyou-can-check-the-demo" class="anchor" href="#if-you-want-to-see-more-detailsyou-can-check-the-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>If you want to see more details,you can check the demo.</h4>
+
+<h3>
+<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thanks</h3>
+
+<ul>
+<li>Use animators from  <a href="https://github.com/wasabeef/recyclerview-animators">recyclerview-animators</a>
+</li>
+<li>Deal with different types of LayoutManager from<a href="https://github.com/Malinskiy/SuperRecyclerView">SuperRecyclerView</a>
+</li>
+<li>Divider of recyclerview<a href="https://github.com/yqritc/RecyclerView-FlexibleDivider">RecyclerView-FlexibleDivider</a>
+</li>
+<li>Parallax header of the recyclerview<a href="https://github.com/kanytu/android-parallax-recyclerview">android-parallax-recyclerview</a>
+</li>
+<li>Floating action button <a href="https://github.com/futuresimple/android-floating-action-button">FloatingActionButton</a>
+</li>
+<li>Colorful pull to refresh <a href="https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh">Ultra Pull To Refresh</a>
+</li>
+<li>Sticky section headers in  RecyclerView <a href="https://github.com/eowise/recyclerview-stickyheaders">StickHeader</a>
+</li>
+<li>Swipe<a href="https://github.com/daimajia/AndroidSwipeLayout">AndroidSwipeLayout</a>
+</li>
+<li>Thanks <a href="https://github.com/jjhesk">jjhesk</a> for doing so many work on the project</li>
+</ul>
+
+<p>If there are someone who I do not mention here,please accept my sincerely appologies and tell me.</p>
+
+<h2>
+<a id="donations" class="anchor" href="#donations" aria-hidden="true"><span class="octicon octicon-link"></span></a><a name="donations"></a>Donations:</h2>
+
+<p>Donate $9.99: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=5GYRYZVNAK2G2"><img src="https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/donate.jpg" alt="$9.99"></a></p>
+
+<p>Donate $19.99: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=2NTS85GHJLRT6"><img src="https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/donate.jpg" alt="$19.99"></a></p>
+
+<p>Donate $39.99: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=EWVECWFKAPBTN"><img src="https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/donate.jpg" alt="$39.99"></a></p>
+
+<p>Donate $59.99: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=ZHSRHTBMUHEMN"><img src="https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/donate.jpg" alt="$59.99"></a></p>
+
+<p>Alipay:<img src="https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/alipay.png" alt="donate"></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<pre><code>Copyright 2015 Marshal Chen
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/cymcsg/UltimateRecyclerView">Ultimaterecyclerview</a> is maintained by <a href="https://github.com/cymcsg">cymcsg</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
