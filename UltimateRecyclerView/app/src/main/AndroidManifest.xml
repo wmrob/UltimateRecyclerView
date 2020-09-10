@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:theme">
         <activity
-            android:name=".MainActivity"
+            android:name=".MainList"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".LauncherActivity"></activity>
         <activity
             android:name=".multiitemdemo.MultiViewTypesActivity"
             android:label="MultiViewTypesActivity" />
@@ -34,10 +34,25 @@
             android:name=".griddemo.GridLayoutRVTest"
             android:label="GridLayoutRVTest" />
         <activity
-            android:name=".loadmoredemo.CustomSwipeToRefreshRefreshActivity"
+            android:name=".griddemo.GridTestOnlyOnePage"
+            android:label="GridLayoutRVTest" />
+        <activity
+            android:name=".loadmoredemo.PullToRefreshActivity"
             android:label="CustomSwipeToRefreshRefreshActivity" />
         <activity
-            android:name=".admobdemo.TestAdMob"
+            android:name=".loadmoredemo.DebugNoHeaderLoadMoreActivity"
+            android:label="NO Header Load More" />
+        <activity
+            android:name=".loadmoredemo.FirstPageCancelLoadMore"
+            android:label="Stop Loading loadmore" />
+        <activity
+            android:name=".loadmoredemo.LineNodeActivity"
+            android:label="LineNodeActivity" />
+        <activity
+            android:name=".loadmoredemo.SliderHeader"
+            android:label="Slider Header" />
+        <activity
+            android:name=".admobdemo.TestAdMobClassicActivity"
             android:label="TestAdMob" />
         <activity
             android:name=".expandemo.TestExpandableRV"
@@ -46,13 +61,19 @@
             android:name=".loadmoredemo.DebugLoadMoreActivity"
             android:label="DebugLoadMoreActivity" />
         <activity
+            android:name=".loadmoredemo.StaggerLoadMoreActivity"
+            android:label="StaggerLoadMoreActivity" />
+        <activity
+            android:name=".loadmoredemo.FinalEmptyViewDisplayActivity"
+            android:label="Display Final View" />
+        <activity
             android:name=".scrollableobservable.ScrollObservablesActivity"
             android:label="ScrollObservablesActivity" />
         <activity
             android:name=".dragdemo.DragActivity"
             android:label="DragActivity" />
         <activity
-            android:name=".swiplistdemo.SwipeListViewExampleActivity"
+            android:name=".loadmoredemo.SwipeListViewExampleActivity"
             android:label="SwipeListViewExampleActivity" />
         <activity
             android:name=".admobdemo.TestAdvancedAdmobActivity"

@@ -3,58 +3,38 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
-        classpath 'com.novoda:bintray-release:0.3.5'
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:3.6.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
+
     }
 }
 
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
 
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
 
 
 ext {
     //Library configurations
     PUBLISH_GROUP_ID = 'com.marshalchen.ultimaterecyclerview'
     PUBLISH_ARTIFACT_ID = 'library'
-
-    ARTIFACT_ID = 'urvlib'
-    VERSION_NAME = '0.4.0'
-    VERSION_CODE = 23
-    //your version
+    PUBLISH_VERSION = '0.9.1'
+    VERSION_CODE = 31
 
     //Application
-    app_demo_versionCode = 23
-    app_demo_versionName = '1.4.0'
-    //Support and Build tools version
-    supportLibrary = '22.2.1'
-    ftKit = '0.4.1'
-    //Support Libraries dependencies
-    supportDependencies = [
-            percent   : "com.android.support:percent:${supportLibrary}",
-            annotation: "com.android.support:support-annotations:${supportLibrary}",
-            support   : "com.android.support:support-v13:${supportLibrary}",
-            appCompat : "com.android.support:appcompat-v7:${supportLibrary}",
-            rv        : "com.android.support:recyclerview-v7:${supportLibrary}",
-            cardView  : "com.android.support:cardview-v7:${supportLibrary}",
-            kitCore   : "com.52inc:52Kit-core:${ftKit}"
-    ]
-
-
-    COMPILE_SDK = 23
-    BUILD_TOOLS = '23.0.1'
-    MODULE_NAME = 'urvlib'
-
-
-
-
+    app_demo_versionCode = 31
+    app_demo_versionName = '1.7.6'
 
     IS_UPLOADING = project.getGradle().startParameter.taskNames.any { it.contains('bintrayUpload') }
 }

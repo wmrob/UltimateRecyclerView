@@ -1,12 +1,13 @@
 package com.marshalchen.ultimaterecyclerview.demo.scrollableobservable;
 
+import android.animation.ValueAnimator;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.core.view.ViewCompat;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -25,8 +26,7 @@ import com.marshalchen.ultimaterecyclerview.demo.R;
 import com.marshalchen.ultimaterecyclerview.demo.scrollableobservable.widget.SlidingTabLayout;
 import com.marshalchen.ultimaterecyclerview.uiUtils.CacheFragmentStatePagerAdapter;
 import com.marshalchen.ultimaterecyclerview.uiUtils.TouchInterceptionLayout;
-import com.nineoldandroids.animation.ValueAnimator;
-import com.nineoldandroids.view.ViewPropertyAnimator;
+
 
 /**
  * Created by hesk on 12/6/15.
@@ -93,8 +93,8 @@ public class ViewPagerTabFragmentParentFragment extends BaseFragment implements 
                     mBaseTranslationY = scrollY;
                 }
             }
-            float headerTranslationY = ScrollUtils.getFloat(mBaseTranslationY - scrollY, -headerBannerHeight, 0);
-            ViewPropertyAnimator.animate(mHeaderContainer).cancel();
+            final float headerTranslationY = ScrollUtils.getFloat(mBaseTranslationY - scrollY, -headerBannerHeight, 0);
+            ViewCompat.animate(mHeaderContainer).cancel();
             ViewCompat.setTranslationY(mHeaderContainer, headerTranslationY);
             //todo: need some more works on this
             setpagertoppadding(totalfullheight - headerTranslationY);
@@ -106,14 +106,14 @@ public class ViewPagerTabFragmentParentFragment extends BaseFragment implements 
     }
 
     @Override
-    public void onUpOrCancelMotionEvent(ObservableScrollState scrollState) {
+    public void onUpOrCancelMotionEvent(final ObservableScrollState scrollState) {
         if (!mScrolled) {
             // This event can be used only when TouchInterceptionFrameLayout
             // doesn't handle the consecutive events.
             // toolbarAdjustment(scrollState);
             mBaseTranslationY = 0;
 
-            Fragment fragment = getCurrentFragment();
+            final Fragment fragment = getCurrentFragment();
             if (fragment == null) {
                 return;
             }

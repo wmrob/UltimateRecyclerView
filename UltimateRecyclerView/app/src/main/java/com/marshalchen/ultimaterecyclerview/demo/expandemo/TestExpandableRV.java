@@ -2,9 +2,9 @@ package com.marshalchen.ultimaterecyclerview.demo.expandemo;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.appcompat.widget.Toolbar;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -69,7 +69,7 @@ public class TestExpandableRV extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_loadmore);
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -91,11 +91,6 @@ public class TestExpandableRV extends AppCompatActivity {
     private void toggleSelection(int position) {
         simpleRecyclerViewAdapter.toggleSelection(position);
         actionMode.setTitle("Selected " + "1");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 
     public int getScreenHeight() {

@@ -1,24 +1,21 @@
 # UltimateRecyclerView
 
-### Version:0.4.0
+ [ ![Download](https://api.bintray.com/packages/marshalchen/UltimateRecyclerview/UltimateRecyclerview/images/download.svg) ](https://bintray.com/marshalchen/UltimateRecyclerview/UltimateRecyclerview/_latestVersion)[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)[![Stories in Ready](https://badge.waffle.io/cymcsg/UltimateRecyclerView.svg?label=ready&title=Ready)](http://waffle.io/cymcsg/UltimateRecyclerView)
 
-[![Throughput Graph](https://graphs.waffle.io/cymcsg/UltimateRecyclerView/throughput.svg)](https://waffle.io/cymcsg/UltimateRecyclerView/metrics)
+
+
 
 #### Master branch:[![Build Status](https://travis-ci.org/cymcsg/UltimateRecyclerView.svg?branch=master)](https://travis-ci.org/cymcsg/UltimateRecyclerView)
 
 #### Dev branch:[![Build Status](https://travis-ci.org/cymcsg/UltimateRecyclerView.svg?branch=dev)](https://travis-ci.org/cymcsg/UltimateRecyclerView)
 
-[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-
-[![Stories in Ready](https://badge.waffle.io/cymcsg/UltimateRecyclerView.svg?label=ready&title=Ready)](http://waffle.io/cymcsg/UltimateRecyclerView)
-
 ##### Project website:[https://github.com/cymcsg/UltimateRecyclerView](https://github.com/cymcsg/UltimateRecyclerView)
+
+
 
 ### Description
 
-UltimateRecyclerView is a RecyclerView(advanced and flexible version of ListView) with pulling to refresh, loading more, swiping to dismiss, draging and drop, animations ,sticky header,show or hide toolbar and FAB when scrolling and many other features.You can use it ```just like RecyclerView```.
-
-
+UltimateRecyclerView is a RecyclerView(advanced and flexible version of ListView) with pulling to refresh, loading more, swiping to dismiss, draging and drop, animations ,sticky header,show or hide toolbar and FAB when scrolling and many other features.You can use it ```just like RecyclerView```. Support AndroidX now.
 
 Notice that UltimateRecyclerView is a project under development.
 
@@ -39,16 +36,66 @@ Notice that UltimateRecyclerView is a project under development.
 * Sticky header like instagram
 * Support different layout in adapter
 * Loading adapter with animation
+* Expandable view in recyclerview
 
-### Changes in 0.4.0:
 
-- [ ] a major fix for load more mechanism for both linear layout and gridlayout
+#### Quick Setup (Basic Usage)
+##### 1.Using Gradle:
+```groovy
+repositories {
+    jcenter()
+    }
+dependencies {
+    ...
+    compile 'com.marshalchen.ultimaterecyclerview:library:0.9.0'
+}
+```
+
+or grab via Maven
+
+```xml
+<dependency>
+  <groupId>com.marshalchen.ultimaterecyclerview</groupId>
+  <artifactId>library</artifactId>
+  <version>0.9.0</version>
+</dependency>
+```
+
+##### 2.Usage:
+
+``` xml
+<com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ultimate_recycler_view"
+/>
+```
+For more details, you can read the Wiki and the demo of the project.
+
+
+
+
+### Version Log
+* ***v0.8.0*** Migrate to AndroidX
+* ***v0.7.0*** Support most features in Recyclerview 24.0.0. Improve the UltimateAdapter. Reduce the size of the library. Fix some bugs.
+
+* ***v0.5.8*** In this version we are now based on support library 23.4.0. We have fixed the load more and disable load more function from early triggers. There is no need to change anything from their implementations. Please read up on the example code if you have any questions from the implementations.
+
+* ***v0.5.6*** In this version we now have 23.3.0 support library and the min version is supported all the ways to v13. New added feature that allow us to adding have node connector on each item on `linearlayoutmanager`. By extending `TimeLineView` you will now have unlimited builds from the things that connected to each dot.
+* ***v0.5.0*** this library will be based on v23.2.1 from now on. if you need have the v23.1.1 please go back to the previous release. detail of this upgrade please see [#342](https://github.com/cymcsg/UltimateRecyclerView/issues/342)
+* ***v0.4.9*** This is the last version that will be based on V23.1.1. and this library will not be supported on this version. For further supports please refer to the latest release.
+* ***v0.3.11*** There are still version that is based on 22.+
+
+
 
 ### Upcoming features:
-
-* More animations
-* Optimise UltimateViewAdapter
+* Refer to discussion for headers [#299](https://github.com/cymcsg/UltimateRecyclerView/issues/299)
+* Refer to discussion for the loading more [#276](https://github.com/cymcsg/UltimateRecyclerView/issues/276)
+* Swipe issue and discussion [#296](https://github.com/cymcsg/UltimateRecyclerView/issues/296)
+* Wishlist for [UltiamteRecyclerview 0.4.2](UpcomingChanges.md)
 * and more.
+
+> Notice that it might not be the latest version
 
 ### Demo App / Sample Code:
 * Due to rapid updates and developments we have decided to host the demo APK on github
@@ -56,69 +103,23 @@ Notice that UltimateRecyclerView is a project under development.
 * Video demo for [grid layout demo](https://www.youtube.com/watch?v=iTnIf-N8m1Y)
 * or you can check it out already compiled at [Google Play](https://play.google.com/store/apps/details?id=com.marshalchen.ultimaterecyclerview.demo)
 * You can clone the project and compile it yourself (it includes a sample), or you can check it out already compiled at Google Play
+* You can read more usage in [wiki](https://github.com/cymcsg/UltimateRecyclerView/wiki) and welcome to make your own tutorials in here.
 
-[Upcoming changes in UltiamteRecyclerview 0.4.1](UpcomingChanges.md):
-
-If you have some good ideas, please tell us. My email is cymcsg # gmail.com.And it is a good idea to put your idea on the issue.
-
-#### Welcome to fork and pull request.
-
-### If you want to use a rapid development framework for developing apps, you can try [UltimateAndroid Framework](https://github.com/cymcsg/UltimateAndroid).
-
-
-> Notice that it might not be the latest version
-
-### Quick Setup（Basic Usage）
-
-###### 1.Integration jcenter
-
-``` gradle
-repositories {  jcenter() }
-
-
-dependencies {
-    compile 'com.marshalchen.ultimaterecyclerview:library:0.4.0'
-}
-```
-
-
-
-###### 2.Usage:
-
-``` xml
-<com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/ultimate_recycler_view"
-       >
-        </com.marshalchen.ultimaterecyclerview.UltimateRecyclerView>
-```
-
-#### You can read more usage in [wiki](https://github.com/cymcsg/UltimateRecyclerView/wiki)
-
-
-
-##### If you want to see more details,you can check the demo.
-
-
-
-
+#### Welcome to fork and PR (pull request)
+If you have some good ideas, please tell us. My email is cymcsg # gmail.com.And it is a good idea to put your idea on the issue. If you want to use a rapid development framework for developing apps, you can try [UltimateAndroid Framework](https://github.com/cymcsg/UltimateAndroid).
 
 ### Screenshot
-
 ![ultimate_recyclerview](https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview11.gif)
-
 ![ultimate_recyclerview](https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview12.gif)
-
 ![ultimate_recyclerview](https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview7.gif)
-
 ![ultimate_recyclerview](https://bytebucket.org/marshalchen/images/raw/f4794974d8de71ab1d0f0efddda556df7e792df2/ultimaterecyclerview/ultimate_recyclerview3.gif)
-
-![ultimate_recyclerview](https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview8.gif)
-
 ![ultimate_recyclerview](https://bytebucket.org/marshalchen/images/raw/44beb162121c719ea4094bd7ea1c9f0cd7de4c04/ultimaterecyclerview/ultimate_recyclerview9.gif)
-
-
+![grid_layout](http://i.giphy.com/UVKEWEGu64z60.gif)
+![grid_layout](http://i.giphy.com/UKxCkkUHVH8Fq.gif)
+![admob](http://i.giphy.com/bExwitMhjtUqI.gif)
+![expandable](http://i.giphy.com/pLWHKsEdVlsKA.gif)
+![node](http://i.giphy.com/Xjf7Y8pZ84OxW.gif)
+![multitype](http://i.giphy.com/bvU4HcWvMhejm.gif)
 
 
 
@@ -136,23 +137,17 @@ dependencies {
 If there are someone who I do not mention here,please accept my sincerely appologies and tell me.
 
 <h2 ><a name="donations"></a>Donations:</h2>
-
 Donate $9.99: [![$9.99](https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/donate.jpg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5GYRYZVNAK2G2)
 
-Donate $19.99: [![$19.99](https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/donate.jpg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2NTS85GHJLRT6)
-
-Donate $39.99: [![$39.99](https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/donate.jpg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EWVECWFKAPBTN)
-
-Donate $59.99: [![$59.99](https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/donate.jpg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZHSRHTBMUHEMN)
-
-
-
 Alipay:![donate](https://bytebucket.org/marshalchen/images/raw/9c442645492ddc10474416debf511a57a0367397/others/alipay.png)
+
+Bitcoin Donation Accepted
+![wallet](http://s32.postimg.org/sdd1oio1t/qrwallet.jpg)
 
 ## License
 
 ``` 
-Copyright 2015 Marshal Chen
+Copyright 2014-present Marshal Chen
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

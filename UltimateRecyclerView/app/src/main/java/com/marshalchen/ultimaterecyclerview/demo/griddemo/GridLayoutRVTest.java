@@ -2,11 +2,11 @@ package com.marshalchen.ultimaterecyclerview.demo.griddemo;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.LayoutRes;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.Toolbar;
-import android.support.v7.widget.helper.ItemTouchHelper;
+import androidx.annotation.LayoutRes;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import android.util.DisplayMetrics;
 import android.view.ActionMode;
 import android.view.Display;
@@ -26,8 +26,8 @@ import java.util.List;
  * Created by hesk on 24/8/15.
  */
 public class GridLayoutRVTest extends AppCompatActivity {
-    private UltimateRecyclerView listuv;
-    private GridJRAdapter mGridAdapter = null;
+    protected UltimateRecyclerView listuv;
+    protected GridJRAdapter mGridAdapter = null;
     private BasicGridLayoutManager mGridLayoutManager;
     private int moreNum = 2, columns = 2;
     private ActionMode actionMode;
@@ -56,8 +56,7 @@ public class GridLayoutRVTest extends AppCompatActivity {
         listuv.setHasFixedSize(true);
         listuv.setSaveEnabled(true);
         listuv.setClipToPadding(false);
-        listuv.setAdapter(mGridAdapter);
-        listuv.setItemAnimator(new DefaultItemAnimator());
+
 
         // mGridAdapter.setCustomLoadMoreView(LayoutInflater.from(this).inflate(R.layout.custom_bottom_progressbar, null));
         listuv.setNormalHeader(setupHeaderView());
@@ -69,17 +68,25 @@ public class GridLayoutRVTest extends AppCompatActivity {
                 f.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        mGridAdapter.insert(SampleDataboxset.genJRList(13));
-                        // listuv.disableLoadmore();
-                        // listuv.disableLoadmore();
+                        mGridAdapter.insert(SampleDataboxset.genJRList(5));
+                        afterAdd();
                     }
                 }, 2000);
             }
         });
 
-        listuv.enableLoadmore();
+        // listuv.enableLoadmore();
         //    listuv.disableLoadmore();
-        harn_controls();
+        listuv.setLoadMoreView(R.layout.custom_bottom_progressbar);
+
+        listuv.setAdapter(mGridAdapter);
+        listuv.setItemAnimator(new DefaultItemAnimator());
+
+        harness_control();
+    }
+
+    protected void afterAdd() {
+
     }
 
     private List<JRitem> getJRList() {
@@ -106,7 +113,7 @@ public class GridLayoutRVTest extends AppCompatActivity {
         return custom_header;
     }
 
-    private void harn_controls() {
+    private void harness_control() {
         findViewById(R.id.add).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,7 +144,7 @@ public class GridLayoutRVTest extends AppCompatActivity {
         findViewById(R.id.refresh).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //  mGridAdapter.notifyDataSetChanged();
+                listuv.reenableLoadmore();
             }
         });
 

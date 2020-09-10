@@ -2,28 +2,28 @@ package com.marshalchen.ultimaterecyclerview.demo.modules;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.IdRes;
+import androidx.annotation.IdRes;
 
-import com.marshalchen.ultimaterecyclerview.demo.loadmoredemo.CustomSwipeToRefreshRefreshActivity;
+import com.marshalchen.ultimaterecyclerview.demo.loadmoredemo.PullToRefreshActivity;
 import com.marshalchen.ultimaterecyclerview.demo.griddemo.GridLayoutRVTest;
 import com.marshalchen.ultimaterecyclerview.demo.multiitemdemo.MultiViewTypesActivity;
 import com.marshalchen.ultimaterecyclerview.demo.R;
-import com.marshalchen.ultimaterecyclerview.demo.admobdemo.TestAdMob;
+import com.marshalchen.ultimaterecyclerview.demo.admobdemo.TestAdMobClassicActivity;
 import com.marshalchen.ultimaterecyclerview.demo.loadmoredemo.DebugLoadMoreActivity;
 import com.marshalchen.ultimaterecyclerview.demo.admobdemo.TestAdvancedAdmobActivity;
 import com.marshalchen.ultimaterecyclerview.demo.scrollableobservable.ScrollObservablesActivity;
-import com.marshalchen.ultimaterecyclerview.demo.swiplistdemo.SwipeListViewExampleActivity;
 import com.marshalchen.ultimaterecyclerview.demo.expandemo.TestExpandableRV;
+import com.marshalchen.ultimaterecyclerview.demo.loadmoredemo.SwipeListViewExampleActivity;
 
 /**
  * Created by hesk on 7/1/2015.
  */
 public enum FastBinding {
     action_bottom(R.id.action_bottom, MultiViewTypesActivity.class),
-    action_custom(R.id.action_custom, CustomSwipeToRefreshRefreshActivity.class),
-    admob(R.id.admob, TestAdMob.class),
+    action_custom(R.id.action_custom, PullToRefreshActivity.class),
+    admob(R.id.admob, TestAdMobClassicActivity.class),
     scrollactivity(R.id.scrollactivity, ScrollObservablesActivity.class),
-   // swipe_and_drag(R.id.swipe_and_drag, SwipeListViewExampleActivity.class),
+    swipe_and_drag(R.id.swipe_and_drag, SwipeListViewExampleActivity.class),
     debug_load_more(R.id.debug_load_more, DebugLoadMoreActivity.class),
     advancedAdmob(R.id.adv_admob, TestAdvancedAdmobActivity.class),
     gridlayouttesting(R.id.gridlayoutperformance, GridLayoutRVTest.class),

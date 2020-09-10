@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion COMPILE_SDK
-    buildToolsVersion BUILD_TOOLS
+    compileSdkVersion project.ANDROID_BUILD_SDK_VERSION as int
 
     defaultConfig {
         applicationId "com.marshalchen.ultimaterecyclerview.demo"
-        minSdkVersion 15
-        targetSdkVersion 23
+        minSdkVersion project.ANDROID_BUILD_MIN_SDK_VERSION as int
+        targetSdkVersion project.ANDROID_BUILD_TARGET_SDK_VERSION as int
         versionCode app_demo_versionCode
         versionName app_demo_versionName
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -25,21 +25,19 @@ repositories {
     flatDir {
         dirs 'libs'
     }
+    maven { url "http://dl.bintray.com/jjhesk/maven" }
 }
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile supportDependencies.appCompat
-    compile supportDependencies.annotation
-    compile supportDependencies.cardView
-
-
-    compile project(':ultimaterecyclerview')
-  //  compile 'com.marshalchen.ultimaterecyclerview:library:0.4.0'
-    compile 'com.google.android.gms:play-services:7.3.0'
-    debugCompile 'me.drakeet.library:crashwoodpecker:0.9.7'
-    releaseCompile 'me.drakeet.library:crashwoodpecker-do-nothing:0.9.7'
-
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:${LEAKCANARY}"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${LEAKCANARY}"
+    testImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${LEAKCANARY}"
+    implementation 'com.google.android.gms:play-services-ads:12.0.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.hkm.loyalslider:library:1.6.2'
+    implementation 'jp.wasabeef:recyclerview-animators:2.2.3'
+    //compile 'com.marshalchen.ultimaterecyclerview:library:0.8.0'
+    api project(':ultimaterecyclerview')
     //used in the gridlayout
     // compile 'com.hkm.loyalslider:library:1.4.5' exclude group: 'android.support.v13'
 

@@ -3,11 +3,10 @@ package com.marshalchen.ultimaterecyclerview.quickAdapter;
 
 import android.app.Activity;
 import android.os.Handler;
-import android.support.annotation.LayoutRes;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.annotation.LayoutRes;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,8 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.marshalchen.ultimaterecyclerview.UltimateRecyclerView;
-import com.marshalchen.ultimaterecyclerview.UltimateRecyclerviewViewHolder;
-import com.marshalchen.ultimaterecyclerview.uiUtils.ScrollSmoothLineaerLayoutManager;
+import com.marshalchen.ultimaterecyclerview.layoutmanagers.ScrollSmoothLineaerLayoutManager;
 
 import java.util.List;
 
@@ -30,13 +28,13 @@ public class BiAdAdapterSwitcher<
         //DATA TYPE
         T,
         //The view holder
-        B extends UltimateRecyclerviewViewHolder,
+        B extends AdItemHolder,
         //THE regular adapter
         EASY extends easyRegularAdapter<T, B>,
         //THE Viewgroup from the google Adview
         V extends ViewGroup,
         //the admobdapter
-        ADMOB extends simpleAdmobAdapter<T, B, V>>
+        ADMOB extends AdmobAdapter<V,T,B>>
 
 {
     protected UltimateRecyclerView listview;
@@ -65,13 +63,10 @@ public class BiAdAdapterSwitcher<
 
     public void init(final boolean adenabled) {
         this.with_the_ad = adenabled;
-        if (layoutLoadMoreResId != 0) {
-            if (adenabled) {
-                withad.setCustomLoadMoreView(getV(layoutLoadMoreResId));
-            } else
-                noad.setCustomLoadMoreView(getV(layoutLoadMoreResId));
+      /*  if (layoutLoadMoreResId != 0) {
             listview.enableLoadmore();
         }
+        */
         listview.setAdapter(adenabled ? this.withad : this.noad);
         emptyViewControl();
     }
@@ -195,7 +190,7 @@ public class BiAdAdapterSwitcher<
             final int delay_trigger,
             final onLoadMore loading_more_trigger_interface) {
         loading_more = loading_more_trigger_interface;
-        listview.setOnLoadMoreListener(new UltimateRecyclerView.OnLoadMoreListener() {
+      /*  listview.setOnLoadMoreListener(new UltimateRecyclerView.OnLoadMoreListener() {
             @Override
             public void loadMore(final int itemsCount, final int maxLastVisiblePosition) {
                 Handler handler = new Handler();
@@ -220,7 +215,7 @@ public class BiAdAdapterSwitcher<
                     }
                 }, delay_trigger);
             }
-        });
+        });*/
         this.layoutLoadMoreResId = layoutResId;
         return this;
     }
